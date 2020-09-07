@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block head %}  
+    <title>MY COLLEGE</title>
+    <style>
+      .container-fluid{
+    max-width: 500px;
+    height:200px;
+    margin-top: 150px;
+    padding-top: 10px;
+    padding-bottom: 10px ;
+    padding-right:10px ;
+    padding-left: 10px;
+   }
+  </style>
+    
+    {% endblock  %}
+    
+    
+    <link rel="stylesheet"
+      href="{{url_for('.static', filename='css/bootstrap.css')}}">
+    <link rel="stylesheet"
+    href="{{url_for('.static', filename='css/style.css')}}">
+</head>
+<body>
+     <div class="container">
+   
+       
+
+    {% block body %} 
+    <center><u><h2>Please select the options belows</h2></u></center>
+        <div class="container-fluid border">
+        
+          <br>
+          <div class="row">
+            <div class="col">
+               <a href="/add"><button type="button" class="btn btn-info">Add new student</button></a> 
+            </div>
+            <div class="col">
+              <a href="/search-student"><button type="button" class="btn btn-success">Search for Student by Id</button></a>
+            </div>
+          </div>
+          <br><br>
+          <div class="row">
+            <div class="col">
+              <center>
+                <a href="/display-student"><button type="button" class="btn btn-warning">Display all the students</button></a>
+
+              </center>
+            </div>
+            
+          </div>
+        </center>
+
+        </div>
+        
+    
+    
+    
+    {% endblock  %}
+    
+   
+    
+  
+  </div>
+    
+    <script src="{{url_for('.static', filename='js/bootsrap.js')}}"></script>
+    </body>
+</html>

@@ -1,0 +1,80 @@
+{% extends 'index.html' %}
+
+{% block head %}  
+<title>add student</title>
+<style>
+    .container-fluid{
+        max-width: 500px;
+        height:900px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+       
+        
+
+    }
+</style>
+
+
+{% endblock  %}
+
+{% block body %} 
+<center><u><h2>Fill the Student details to add</h2></u></center>
+    <div class="container-fluid border border-info"> 
+        
+        
+        <form action="#" method="POST">
+            <div class="form-group">
+              <b><label for="Student Id" >Student Id</label></b>
+              <input type="text" class="form-control" id="sid" name="sid"  placeholder="Enter student Id">
+            </div>
+            <div class="form-group">
+              <b><label for="Student name" > Student Name</label></b>
+              <input type="text" id="sname" name="sname" class="form-control"  placeholder="enter student name">
+            </div>
+            
+            <b><label  for="Gender">Select the Gender</label></b>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="gender" id="gender" value="Male" checked>
+                <label  for="Male">
+                  Male
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="gender" id="gender" value="Female">
+                <label  for="Female">
+                  Female
+                </label>
+            </div>
+            <br>
+            <div class="form-group">
+                <b><label  for="Date of Birth">Date of Birth</label></b>
+                <input type="date" id="dob" name="dob" class="form-control">
+            </div>
+            <div class="form-group">
+                <b><label for="City">City</label></b>
+                <input type="text" id="city" name="city" placeholder="Enter The City" class="form-control">
+            </div>
+            <div class="form-group">
+                <b><label  for="state">State</label></b>
+                <input type="text" id="state" name="state" placeholder="Enter The State" class="form-control">
+            </div>
+            <div class="form-group">
+                <b><label   for="Email">Email</label></b>
+                <input type="email" id="email" name="email" placeholder="Enter Your Enail" class="form-control">
+            </div>
+            <div class="form-group">
+                <b><label  for="state">Qualification</label></b>
+                <input type="text" id="qual" name="qual" placeholder="Enter The Qualification" class="form-control">
+            </div>
+            <div class="form-group">
+                <b><label   for="state">Stream</label></b>
+                <input type="text" id="stream" name="stream" placeholder="Enter Your Stream" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <a href="/index" ><button type="button" class="btn btn-secondary">Home Page</button></a>
+          </form>
+    
+    </div>
+    
+    
+    {% endblock  %}
